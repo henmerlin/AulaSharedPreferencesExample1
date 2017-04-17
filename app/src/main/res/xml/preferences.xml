@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- PreferenceScreen é o Layout especialmente dedicado a exibir possibilidades de
+    preferências ao usuário. Este Layout não exibe Views como os LayoutManagers vistos até agora,
+    ele exibe UI que permitem que o usuário faça suas escolhas para determinadas caracterìsticas
+    que o App possui. Veja abaixo exemplos destas UI, como listas, camplos de edição checkbox e mais!
+
+     Tudo o que é setado aqui o Android trata de armazenar e compartilhar com a MainActivity.
+     Além disso o Android armazenas estas configurações em disco e as deixa sempre disponível
+     através de uma instância de SharedPreferences na próxima vez que reinicializar seu App.
+
+     Lembre-se que SharedPreferences armazena valores em bundle, uma tupla (key, valor) é usada
+     para recuperar os dados. -->
+
+    <!-- Pode-se deixar o usuáriio escolher uma aparência para o app-->
+    <ListPreference
+        android:key="listchoice_01_view"
+        android:title="Backgroud Color List Choice"
+        android:entries="@array/choices"
+        android:entryValues="@array/choices"
+        />
+    <!-- Adiciona uma categoria de escolhas pessoais-->
+    <PreferenceCategory
+        android:title="Personal">
+        <!-- O usuário pode escolher o nome pelo qual quer ser tratado pelo App-->
+        <EditTextPreference
+            android:key="nameChoice_01_view"
+            android:title="name" />
+        <!-- O usuário pode ter uma escolha tipe CheckoBox que especifíca determinado comportamento do App-->
+        <CheckBoxPreference
+            android:key="booleanchoice_01_view"
+            android:title="Binary Choice" />
+        <!-- O usuário pode escolher em receber ou não notificações deste App exemplo-->
+        <SwitchPreference
+            android:title="Notifications"
+            android:key="switch_01_view"
+            android:switchTextOn="ON"
+            android:switchTextOff="OFF" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choices">
+        <item>azul</item>
+        <item>vermelho</item>
+        <item>verde</item>
+        <item>amarelo</item>
+        <item>preto</item>
+        <item>branco</item>
+    </string-array>
+</resources>
